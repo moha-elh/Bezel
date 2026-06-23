@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap');
+
+/* ── Design tokens ── */
+:root {
+  --color-bg:             #f3f1ea;
+  --color-surface:        #faf8f3;
+  --color-surface-hover:  #f1efe7;
+  --color-border:         #e3e0d8;
+  --color-border-strong:  #ccc9bf;
+  --color-text-primary:   #1c1b19;
+  --color-text-secondary: #56534c;
+  --color-text-muted:     #a8a499;
+  --color-accent:         #1d7a46;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Geist', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: 'Geist', sans-serif;
+}
+
+select, input {
+  font-family: 'Geist', sans-serif;
+}

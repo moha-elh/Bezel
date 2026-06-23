@@ -1,0 +1,20 @@
+.stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  position: relative;
+  border-radius: 50%;
+  /* Checkerboard to show transparency */
+  background-color: #eeece4;
+  background-image:
+    repeating-conic-gradient(#eeece4 0% 25%, #f4f2eb 0% 50%);
+  background-size: 20px 20px;
+}
+
+.canvas {
+  display: block;
+  border-radius: 50%;
+}

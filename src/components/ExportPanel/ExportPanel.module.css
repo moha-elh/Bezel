@@ -1,0 +1,57 @@
+.wrapper {
+  position: relative;
+}
+
+.caret {
+  font-size: 10px;
+  opacity: 0.65;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  width: 200px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  box-shadow: 0 8px 24px rgba(28, 27, 25, 0.12);
+  padding: 6px;
+  z-index: 20;
+}
+
+.dropdownLabel {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: 6px 8px 8px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: 'Geist', sans-serif;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  background: none;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.1s;
+}
+
+.option:hover {
+  background: var(--color-surface-hover);
+}
+
+.dim {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
