@@ -14,8 +14,12 @@ export interface FrameState {
   ringThickness: number;
   arcStartAngle: number;
   arcEndAngle: number;
-  solidZone: number;
-  fadeAngle: number;
+  fadeStartA: number;
+  fadeSizeA: number;
+  fadeAngleA: number;
+  fadeStartB: number;
+  fadeSizeB: number;
+  fadeAngleB: number;
 
   // ── Ribbon text ────────────────────────────────────────
   text: string;
@@ -34,8 +38,12 @@ export interface FrameState {
   setRingColor: (hex: string) => void;
   setRingThickness: (px: number) => void;
   setArc: (startAngle: number, endAngle: number) => void;
-  setSolidZone: (v: number) => void;
-  setFadeAngle: (v: number) => void;
+  setFadeStartA: (v: number) => void;
+  setFadeSizeA: (v: number) => void;
+  setFadeAngleA: (v: number) => void;
+  setFadeStartB: (v: number) => void;
+  setFadeSizeB: (v: number) => void;
+  setFadeAngleB: (v: number) => void;
   setText: (text: string) => void;
   setTextStyle: (fontSize: number, letterSpacing: number, color: string) => void;
   setFontFamily: (family: string) => void;

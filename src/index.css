@@ -43,3 +43,26 @@ button {
 select, input {
   font-family: 'Geist', sans-serif;
 }
+
+/* ── react-colorful theme ── */
+.react-colorful {
+  width: 100%;
+  gap: 10px;
+}
+
+.react-colorful__saturation {
+  border-radius: 6px;
+  border-bottom: none;
+}
+
+.react-colorful__hue {
+  border-radius: 4px;
+  height: 12px;
+}
+
+.react-colorful__pointer {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}

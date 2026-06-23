@@ -16,8 +16,12 @@ export function PreviewCanvas() {
   const ringThickness = useFrameStore((s) => s.ringThickness);
   const arcStartAngle = useFrameStore((s) => s.arcStartAngle);
   const arcEndAngle = useFrameStore((s) => s.arcEndAngle);
-  const solidZone = useFrameStore((s) => s.solidZone);
-  const fadeAngle = useFrameStore((s) => s.fadeAngle);
+  const fadeStartA = useFrameStore((s) => s.fadeStartA);
+  const fadeSizeA  = useFrameStore((s) => s.fadeSizeA);
+  const fadeAngleA = useFrameStore((s) => s.fadeAngleA);
+  const fadeStartB = useFrameStore((s) => s.fadeStartB);
+  const fadeSizeB  = useFrameStore((s) => s.fadeSizeB);
+  const fadeAngleB = useFrameStore((s) => s.fadeAngleB);
   const text = useFrameStore((s) => s.text);
   const fontSize = useFrameStore((s) => s.fontSize);
   const letterSpacing = useFrameStore((s) => s.letterSpacing);
@@ -39,8 +43,12 @@ export function PreviewCanvas() {
       ringThickness,
       arcStartAngle,
       arcEndAngle,
-      solidZone,
-      fadeAngle,
+      fadeStartA,
+      fadeSizeA,
+      fadeAngleA,
+      fadeStartB,
+      fadeSizeB,
+      fadeAngleB,
       text,
       fontSize,
       letterSpacing,
@@ -49,7 +57,7 @@ export function PreviewCanvas() {
     });
   }, [
     photo, crop, ringColor, ringThickness,
-    arcStartAngle, arcEndAngle, solidZone, fadeAngle, text, fontSize,
+    arcStartAngle, arcEndAngle, fadeStartA, fadeSizeA, fadeAngleA, fadeStartB, fadeSizeB, fadeAngleB, text, fontSize,
     letterSpacing, textColor, fontFamily,
   ]);
 

@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { HexColorPicker, HexColorInput } from 'react-colorful';
 import styles from './CustomizationPanel.module.css';
 
 const RING_COLORS = [
@@ -25,8 +26,24 @@ interface SwatchesWithPickerProps {
 }
 
 function SwatchesWithPicker({ colors, active, onSelect, size = 24 }: SwatchesWithPickerProps) {
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [open, setOpen] = useState(false);
+  const wrapRef = useRef<HTMLDivElement>(null);
   const isCustom = !colors.includes(active);
+
+  // Close popover when clicking outside
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: MouseEvent) => {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, [open]);
+
+  // Normalize the active color for the picker (ensure valid hex)
+  const pickerColor = /^#[0-9a-fA-F]{6}$/.test(active) ? active : '#000000';
 
   return (
     <div className={styles.swatches}>
@@ -40,46 +57,41 @@ function SwatchesWithPicker({ colors, active, onSelect, size = 24 }: SwatchesWit
             height: size,
             boxShadow: active === color ? ACTIVE_SHADOW : INACTIVE_SHADOW,
           }}
-          onClick={() => onSelect(color)}
+          onClick={() => { onSelect(color); setOpen(false); }}
           aria-label={color}
         />
       ))}
 
-      {/* Wrapper positions the hidden input to the right of the swatch button
-          so the browser opens the color picker beside it */}
-      <span style={{ position: 'relative', display: 'inline-flex' }}>
-        <input
-          ref={inputRef}
-          type="color"
-          value={isCustom ? active : '#000000'}
-          onChange={(e) => onSelect(e.target.value)}
-          style={{
-            position: 'absolute',
-            left: '100%',
-            top: 0,
-            width: 0,
-            height: 0,
-            opacity: 0,
-            pointerEvents: 'none',
-            border: 'none',
-            padding: 0,
-          }}
-        />
+      {/* Rainbow swatch — always shows rainbow, never adopts the selected color */}
+      <div ref={wrapRef} style={{ position: 'relative', display: 'inline-flex' }}>
         <button
           className={styles.swatch}
           style={{
-            background: isCustom
-              ? active
-              : 'conic-gradient(red, yellow, lime, cyan, blue, magenta, red)',
+            background: 'conic-gradient(red, yellow, lime, cyan, blue, magenta, red)',
             width: size,
             height: size,
             boxShadow: isCustom ? ACTIVE_SHADOW : INACTIVE_SHADOW,
           }}
-          onClick={() => inputRef.current?.click()}
+          onClick={() => setOpen((o) => !o)}
           aria-label="Custom color"
           title="Pick a custom color"
         />
-      </span>
+
+        {open && (
+          <div className={styles.colorPickerPopover}>
+            <HexColorPicker color={pickerColor} onChange={onSelect} />
+            <div className={styles.hexInputRow}>
+              <span>#</span>
+              <HexColorInput
+                color={pickerColor}
+                onChange={onSelect}
+                className={styles.hexInput}
+                prefixed={false}
+              />
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

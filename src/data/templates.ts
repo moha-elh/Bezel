@@ -1,6 +1,6 @@
 // Bottom arc: anticlockwise from 200° to 30°
-const BOTTOM_START = (200 * Math.PI) / 180;
-const BOTTOM_END = (30 * Math.PI) / 180;
+const BOTTOM_START = (240 * Math.PI) / 180;
+const BOTTOM_END = (20 * Math.PI) / 180;
 
 // Top arc: anticlockwise from 135° to 45°, midpoint = 270° = top center
 const TOP_START = (135 * Math.PI) / 180;
@@ -17,8 +17,12 @@ export interface Template {
   ringThickness: number;
   arcStartAngle: number;
   arcEndAngle: number;
-  solidZone: number;
-  fadeAngle: number;
+  fadeStartA: number;
+  fadeSizeA: number;
+  fadeAngleA: number;
+  fadeStartB: number;
+  fadeSizeB: number;
+  fadeAngleB: number;
   text: string;
   textColor: string;
   fontFamily: string;
@@ -34,8 +38,12 @@ export const templates: Template[] = [
     ringThickness: 81,
     arcStartAngle: BOTTOM_START,
     arcEndAngle: BOTTOM_END,
-    solidZone: 0.5,
-    fadeAngle: 115,
+    fadeStartA: 0.08,
+    fadeSizeA: 0.11,
+    fadeAngleA: 111,
+    fadeStartB: 0.08,
+    fadeSizeB: 0.13,
+    fadeAngleB: 150,
     text: '#OPENTOWORK',
     textColor: '#ffffff',
     fontFamily: "'Geist', sans-serif",
@@ -49,8 +57,12 @@ export const templates: Template[] = [
     ringThickness: 81,
     arcStartAngle: BOTTOM_START,
     arcEndAngle: BOTTOM_END,
-    solidZone: 0.5,
-    fadeAngle: 115,
+    fadeStartA: 0.08,
+    fadeSizeA: 0.11,
+    fadeAngleA: 111,
+    fadeStartB: 0.08,
+    fadeSizeB: 0.13,
+    fadeAngleB: 150,
     text: '#HIRING',
     textColor: '#ffffff',
     fontFamily: "'Geist', sans-serif",
@@ -64,8 +76,12 @@ export const templates: Template[] = [
     ringThickness: 81,
     arcStartAngle: BOTTOM_START,
     arcEndAngle: BOTTOM_END,
-    solidZone: 0.5,
-    fadeAngle: 115,
+    fadeStartA: 0.08,
+    fadeSizeA: 0.11,
+    fadeAngleA: 111,
+    fadeStartB: 0.08,
+    fadeSizeB: 0.13,
+    fadeAngleB: 150,
     text: "#I'M SPEAKING",
     textColor: '#ffffff',
     fontFamily: "'Geist', sans-serif",
@@ -79,8 +95,12 @@ export const templates: Template[] = [
     ringThickness: 81,
     arcStartAngle: BOTTOM_START,
     arcEndAngle: BOTTOM_END,
-    solidZone: 0.5,
-    fadeAngle: 115,
+    fadeStartA: 0.08,
+    fadeSizeA: 0.11,
+    fadeAngleA: 111,
+    fadeStartB: 0.08,
+    fadeSizeB: 0.13,
+    fadeAngleB: 150,
     text: '#MENTORING',
     textColor: '#ffffff',
     fontFamily: "'Geist', sans-serif",
@@ -94,8 +114,12 @@ export const templates: Template[] = [
     ringThickness: 81,
     arcStartAngle: BOTTOM_START,
     arcEndAngle: BOTTOM_END,
-    solidZone: 0.5,
-    fadeAngle: 115,
+    fadeStartA: 0.08,
+    fadeSizeA: 0.11,
+    fadeAngleA: 111,
+    fadeStartB: 0.08,
+    fadeSizeB: 0.13,
+    fadeAngleB: 150,
     text: '#YOUR TEXT',
     textColor: '#ffffff',
     fontFamily: "'Geist', sans-serif",

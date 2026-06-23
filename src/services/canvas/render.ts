@@ -66,8 +66,12 @@ export function render(
     | 'ringThickness'
     | 'arcStartAngle'
     | 'arcEndAngle'
-    | 'solidZone'
-    | 'fadeAngle'
+    | 'fadeStartA'
+    | 'fadeSizeA'
+    | 'fadeAngleA'
+    | 'fadeStartB'
+    | 'fadeSizeB'
+    | 'fadeAngleB'
     | 'text'
     | 'fontSize'
     | 'letterSpacing'
@@ -89,8 +93,12 @@ export function render(
     state.ringThickness,
     state.arcStartAngle,
     state.arcEndAngle,
-    state.solidZone,
-    state.fadeAngle
+    state.fadeStartA,
+    state.fadeSizeA,
+    state.fadeAngleA,
+    state.fadeStartB,
+    state.fadeSizeB,
+    state.fadeAngleB
   );
 
   if (state.text.trim() && !isFullRing(state.arcStartAngle, state.arcEndAngle)) {
