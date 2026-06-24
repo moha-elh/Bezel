@@ -55,6 +55,7 @@
 /* ── Main split ── */
 .main {
   flex: 1;
+  min-height: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -69,7 +70,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 16px;
-  padding: 16px 24px;
+  padding: 40px 24px 24px;
 }
 
 /* Controls column (right) */
@@ -82,4 +83,34 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .controls {
+    max-width: none;
+    flex: 1 1 100%;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0 16px;
+    gap: 8px;
+  }
+
+  .logoSub {
+    display: none;
+  }
+
+  .preview {
+    padding: 24px 16px 16px;
+    min-width: 0;
+  }
+
+  .controls {
+    min-width: 0;
+  }
 }

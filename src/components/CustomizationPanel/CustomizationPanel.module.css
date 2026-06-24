@@ -11,6 +11,10 @@
   gap: 16px;
 }
 
+.section:last-child {
+  border-bottom: none;
+}
+
 .sectionLabel {
   font-size: 11px;
   font-weight: 600;
@@ -142,12 +146,13 @@
   font-family: 'Geist Mono', monospace;
   font-size: 13px;
   color: var(--color-text-primary);
-  width: 100%;
+  width: 52px;
   border: 1.5px solid var(--color-border);
   border-radius: 8px;
-  padding: 9px 11px;
+  padding: 9px 8px;
   background: var(--color-surface);
   outline: none;
+  text-align: center;
   transition: border-color 0.12s;
 }
 
@@ -198,6 +203,19 @@
 
 .sliderRow > :first-child {
   flex: 1;
+}
+
+.numInputWrap {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.numUnit {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  color: var(--color-text-muted);
 }
 
 /* Custom font dropdown */

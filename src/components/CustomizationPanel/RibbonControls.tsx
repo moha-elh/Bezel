@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useFrameStore } from '../../store/frameStore';
 import { Slider } from '../ui/Slider';
 import { Field } from '../ui/Field';
@@ -5,43 +6,64 @@ import styles from './CustomizationPanel.module.css';
 
 export function RibbonControls() {
   const ringThickness = useFrameStore((s) => s.ringThickness);
-  const fadeSizeA     = useFrameStore((s) => s.fadeSizeA);
-  const fadeSizeB     = useFrameStore((s) => s.fadeSizeB);
+  const arcStartAngle = useFrameStore((s) => s.arcStartAngle);
+  const arcEndAngle   = useFrameStore((s) => s.arcEndAngle);
 
   const setRingThickness = useFrameStore((s) => s.setRingThickness);
-  const setFadeSizeA     = useFrameStore((s) => s.setFadeSizeA);
-  const setFadeSizeB     = useFrameStore((s) => s.setFadeSizeB);
+  const setArc           = useFrameStore((s) => s.setArc);
 
-  const fadeDisplay = Math.round((fadeSizeA + fadeSizeB) / 2 * 100);
+  const [draft, setDraft] = useState(String(ringThickness));
+
+  useEffect(() => { setDraft(String(ringThickness)); }, [ringThickness]);
+
+  function commitDraft() {
+    const n = Math.max(10, Math.min(150, Number(draft) || 10));
+    setRingThickness(n);
+    setDraft(String(n));
+  }
+
+  const arcSpanDeg = Math.round((arcStartAngle - arcEndAngle) * (180 / Math.PI));
+
+  function handleLength(spanDeg: number) {
+    const halfSpan = (spanDeg / 2) * (Math.PI / 180);
+    const mid = (arcStartAngle + arcEndAngle) / 2;
+    setArc(mid + halfSpan, mid - halfSpan);
+  }
 
   return (
     <div className={styles.block}>
       <Field label="Thickness">
         <div className={styles.sliderRow}>
           <Slider min={10} max={150} step={1} value={ringThickness} onChange={setRingThickness} />
-          <input
-            type="number"
-            className={styles.numInput}
-            style={{ width: 58, flexShrink: 0 }}
-            min={10}
-            max={150}
-            value={ringThickness}
-            onChange={(e) => {
-              const v = Math.max(10, Math.min(150, Number(e.target.value)));
-              setRingThickness(v);
-            }}
-          />
+          <div className={styles.numInputWrap}>
+            <input
+              type="number"
+              className={styles.numInput}
+              min={10}
+              max={150}
+              value={draft}
+              onChange={(e) => setDraft(e.target.value)}
+              onBlur={commitDraft}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  commitDraft();
+                  (e.target as HTMLInputElement).blur();
+                }
+              }}
+            />
+            <span className={styles.numUnit}>px</span>
+          </div>
         </div>
       </Field>
 
-      <Field label="Fade">
+      <Field label="Length">
         <Slider
-          min={0}
-          max={50}
+          min={120}
+          max={340}
           step={1}
-          value={fadeDisplay}
-          onChange={(v) => { setFadeSizeA(v / 100); setFadeSizeB(v / 100); }}
-          valueLabel={`${fadeDisplay}%`}
+          value={arcSpanDeg}
+          onChange={handleLength}
+          valueLabel={`${arcSpanDeg}°`}
         />
       </Field>
     </div>
