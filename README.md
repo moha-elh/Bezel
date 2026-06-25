@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# Bezel — Be Seen. Be Trusted.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Generate custom LinkedIn profile frames directly in your browser. Upload your photo, pick a template, tweak the style, and export a ready-to-upload PNG in seconds.
 
-Currently, two official plugins are available:
+![Bezel app preview](./src/assets/Preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **7 ready-made templates** — #OpenToWork, #Hiring, #Firing, #Tired, #Grinding, #I'mPregnant, and a fully customizable option
+- **Live preview** — see every change reflected instantly on the canvas
+- **Photo upload & crop** — drag to reposition your photo inside the frame
+- **Customizable ring** — adjust color, thickness, arc length, and fade
+- **Custom text** — change the ribbon text, font, size, and color
+- **One-click export** — downloads a 500×500 PNG ready for LinkedIn
+- **Fully responsive** — works on desktop and mobile
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) — build tooling
+- [Zustand](https://github.com/pmndrs/zustand) — state management
+- Canvas 2D API — all rendering done natively, no canvas libraries
+- [react-colorful](https://github.com/omgovich/react-colorful) — color picker
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Run locally
+
+```bash
+git clone https://github.com/moha-elh/Bezel.git
+cd Bezel
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Build
+
+```bash
+npm run build
 ```
+
+Output goes to `dist/`.
+
+---
+
+## Support
+
+If this tool saved you time, consider buying me a coffee ☕
+
+[![Support me on Ko-fi](https://storage.ko-fi.com/cdn/kofi3.png?v=3)](https://ko-fi.com/D6J4222HPP)
