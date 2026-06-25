@@ -5,7 +5,7 @@ import { TemplateGallery } from './components/TemplateGallery/TemplateGallery';
 import { CustomizationPanel } from './components/CustomizationPanel/CustomizationPanel';
 import { PreviewCanvas } from './components/PreviewCanvas/PreviewCanvas';
 import { ExportPanel } from './components/ExportPanel/ExportPanel';
-import bezelLogo from './assets/Bezel.png';
+import bezelLogo from './assets/Bezel full.png';
 import styles from './App.module.css';
 
 export default function App() {
@@ -18,7 +18,6 @@ export default function App() {
         <div className={styles.wordmark}>
           <img src={bezelLogo} alt="Bezel" className={styles.logoImg} />
           <span className={styles.logoName}>Bezel</span>
-          <span className={styles.logoSub}>Be Seen. Be Trusted.</span>
         </div>
         <ExportPanel />
       </header>
