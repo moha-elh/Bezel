@@ -4,12 +4,9 @@ import { render } from '../../services/canvas/render';
 import { useImageCrop } from '../../hooks/useImageCrop';
 import styles from './PreviewCanvas.module.css';
 
-const DISPLAY_SIZE = 432; // px on screen
-
 export function PreviewCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Subscribe to all state slices needed for rendering
   const photo = useFrameStore((s) => s.photo);
   const crop = useFrameStore((s) => s.crop);
   const ringColor = useFrameStore((s) => s.ringColor);
@@ -28,7 +25,7 @@ export function PreviewCanvas() {
   const textColor = useFrameStore((s) => s.textColor);
   const fontFamily = useFrameStore((s) => s.fontFamily);
 
-  const { onPointerDown, onPointerMove, onPointerUp } = useImageCrop(DISPLAY_SIZE);
+  const { onPointerDown, onPointerMove, onPointerUp } = useImageCrop();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -69,11 +66,7 @@ export function PreviewCanvas() {
           width={500}
           height={500}
           className={styles.canvas}
-          style={{
-            width: DISPLAY_SIZE,
-            height: DISPLAY_SIZE,
-            cursor: photo ? 'grab' : 'default',
-          }}
+          style={{ cursor: photo ? 'grab' : 'default' }}
           onPointerDown={photo ? onPointerDown : undefined}
           onPointerMove={photo ? onPointerMove : undefined}
           onPointerUp={photo ? onPointerUp : undefined}

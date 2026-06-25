@@ -2,11 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .board {
   position: relative;
   border-radius: 50%;
+  width: min(432px, 100%);
+  aspect-ratio: 1;
   /* Checkerboard to show transparency */
   background-color: #eeece4;
   background-image:
@@ -17,4 +20,6 @@
 .canvas {
   display: block;
   border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
