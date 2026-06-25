@@ -85,6 +85,26 @@
   overflow-y: auto;
 }
 
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.kofiBtn {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.12s;
+}
+
+.kofiBtn:hover {
+  opacity: 0.85;
+}
+
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .controls {
@@ -113,4 +133,5 @@
   .controls {
     min-width: 0;
   }
+
 }

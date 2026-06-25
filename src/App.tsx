@@ -19,7 +19,22 @@ export default function App() {
           <img src={bezelLogo} alt="Bezel" className={styles.logoImg} />
           <span className={styles.logoName}>Bezel</span>
         </div>
-        <ExportPanel />
+        <div className={styles.headerRight}>
+          <a
+            href="https://ko-fi.com/D6J4222HPP"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.kofiBtn}
+          >
+            <img
+              src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
+              height="36"
+              alt="Support me on Ko-fi"
+              style={{ border: 0, display: 'block' }}
+            />
+          </a>
+          <ExportPanel />
+        </div>
       </header>
 
       {/* ── Main ── */}
