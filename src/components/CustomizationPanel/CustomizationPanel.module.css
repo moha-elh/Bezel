@@ -69,12 +69,9 @@
   flex-direction: column;
 }
 
-/* Custom color picker popover */
+/* Custom color picker popover — rendered via portal at document.body */
 .colorPickerPopover {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  z-index: 50;
+  z-index: 9999;
   background: var(--color-surface);
   border: 1.5px solid var(--color-border);
   border-radius: 12px;

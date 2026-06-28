@@ -109,11 +109,20 @@
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
+  .main {
+    overflow-y: auto;
+  }
+
+  .preview {
+    overflow-y: visible;
+  }
+
   .controls {
     max-width: none;
     flex: 1 1 100%;
     border-left: none;
     border-top: 1px solid var(--color-border);
+    overflow-y: visible;
   }
 }
 

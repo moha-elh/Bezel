@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { HexColorPicker, HexColorInput } from 'react-colorful';
 import styles from './CustomizationPanel.module.css';
 
@@ -27,7 +28,9 @@ interface SwatchesWithPickerProps {
 
 function SwatchesWithPicker({ colors, active, onSelect, size = 24 }: SwatchesWithPickerProps) {
   const [open, setOpen] = useState(false);
+  const [popoverStyle, setPopoverStyle] = useState<React.CSSProperties>({});
   const wrapRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const isCustom = !colors.includes(active);
 
   // Close popover when clicking outside
@@ -40,6 +43,31 @@ function SwatchesWithPicker({ colors, active, onSelect, size = 24 }: SwatchesWit
     };
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
+  }, [open]);
+
+  // Close popover on scroll or resize so fixed position doesn't go stale
+  useEffect(() => {
+    if (!open) return;
+    const close = () => setOpen(false);
+    window.addEventListener('scroll', close, true);
+    window.addEventListener('resize', close);
+    return () => {
+      window.removeEventListener('scroll', close, true);
+      window.removeEventListener('resize', close);
+    };
+  }, [open]);
+
+  // Calculate viewport-relative position for the portal popover
+  useLayoutEffect(() => {
+    if (!open || !buttonRef.current) return;
+    const rect = buttonRef.current.getBoundingClientRect();
+    const popoverWidth = 224; // min-width 200px + 24px padding
+    const left = Math.min(rect.left, window.innerWidth - popoverWidth - 8);
+    setPopoverStyle({
+      position: 'fixed',
+      top: rect.bottom + 8,
+      left: Math.max(8, left),
+    });
   }, [open]);
 
   // Normalize the active color for the picker (ensure valid hex)
@@ -63,8 +91,9 @@ function SwatchesWithPicker({ colors, active, onSelect, size = 24 }: SwatchesWit
       ))}
 
       {/* Rainbow swatch — always shows rainbow, never adopts the selected color */}
-      <div ref={wrapRef} style={{ position: 'relative', display: 'inline-flex' }}>
+      <div ref={wrapRef} style={{ display: 'inline-flex' }}>
         <button
+          ref={buttonRef}
           className={styles.swatch}
           style={{
             background: 'conic-gradient(red, yellow, lime, cyan, blue, magenta, red)',
@@ -77,8 +106,8 @@ function SwatchesWithPicker({ colors, active, onSelect, size = 24 }: SwatchesWit
           title="Pick a custom color"
         />
 
-        {open && (
-          <div className={styles.colorPickerPopover}>
+        {open && createPortal(
+          <div className={styles.colorPickerPopover} style={popoverStyle}>
             <HexColorPicker color={pickerColor} onChange={onSelect} />
             <div className={styles.hexInputRow}>
               <span>#</span>
@@ -89,7 +118,8 @@ function SwatchesWithPicker({ colors, active, onSelect, size = 24 }: SwatchesWit
                 prefixed={false}
               />
             </div>
-          </div>
+          </div>,
+          document.body
         )}
       </div>
     </div>
