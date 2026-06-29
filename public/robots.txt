@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://trybezel.xyz/sitemap.xml
