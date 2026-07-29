@@ -6,6 +6,7 @@ import { TemplateGallery } from '../components/TemplateGallery/TemplateGallery';
 import { CustomizationPanel } from '../components/CustomizationPanel/CustomizationPanel';
 import { PreviewCanvas } from '../components/PreviewCanvas/PreviewCanvas';
 import { ExportPanel } from '../components/ExportPanel/ExportPanel';
+import { AdBanner } from '../components/AdBanner/AdBanner';
 import bezelLogo from '../assets/Bezel full.png';
 import styles from './EditorPage.module.css';
 
@@ -53,6 +54,9 @@ export function EditorPage() {
           <CustomizationPanel />
         </aside>
       </main>
+
+      {/* ── Ad ── */}
+      <AdBanner />
     </div>
   );
 }
