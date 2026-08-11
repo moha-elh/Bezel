@@ -671,6 +671,7 @@
   transition: opacity 0.12s;
 }
 .footerLink:hover { opacity: 0.75; }
+.footerNav { display: inline-flex; gap: 18px; flex-wrap: wrap; }
 .footerMeta {
   font-family: 'Space Mono', monospace;
   font-size: 12px;

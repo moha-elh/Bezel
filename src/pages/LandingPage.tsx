@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import bezelLogo from '../assets/Bezel full browser.png';
 import f1 from '../assets/frames/frame-1.png';
 import f2 from '../assets/frames/frame-2.png';
@@ -304,6 +304,12 @@ export function LandingPage() {
             <span className={styles.footerName}>Bezel</span>
           </div>
           <div className={styles.footerRight}>
+            <nav className={styles.footerNav}>
+              <Link to="/guide" className={styles.footerLink}>Guide</Link>
+              <Link to="/about" className={styles.footerLink}>About</Link>
+              <Link to="/privacy" className={styles.footerLink}>Privacy</Link>
+              <Link to="/terms" className={styles.footerLink}>Terms</Link>
+            </nav>
             <a
               href="https://ko-fi.com/D6J4222HPP"
               target="_blank"
