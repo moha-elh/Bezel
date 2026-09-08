@@ -1,14 +1,25 @@
 import { type ReactNode, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import bezelLogo from '../assets/Bezel full browser.png';
+import { useHead } from '../hooks/useHead';
 import styles from './ContentPage.module.css';
 
 // Shared shell for all long-form content pages (privacy, terms, about, guide).
-export function ContentPage({ title, children }: { title: string; children: ReactNode }) {
+export function ContentPage({
+  title,
+  description,
+  path,
+  children,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  children: ReactNode;
+}) {
+  useHead({ title: `${title} · Bezel`, description, path });
   useEffect(() => {
-    document.title = `${title} · Bezel`;
     window.scrollTo(0, 0);
-  }, [title]);
+  }, [path]);
 
   return (
     <div className={styles.page}>

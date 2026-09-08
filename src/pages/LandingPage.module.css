@@ -516,6 +516,68 @@
   text-align: center;
 }
 
+/* ════════════════════════════ GUIDES ════════════════════════════ */
+.guides {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 26px 40px;
+}
+.guidesHead {
+  text-align: center;
+  margin: 0 auto 48px;
+  max-width: 560px;
+}
+.guidesHead .sectionSub { margin-inline: auto; }
+
+.guidesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.guideCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 24px 22px;
+  text-decoration: none;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+              border-color 0.2s, background 0.2s, box-shadow 0.25s;
+}
+.guideCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(111, 211, 154, 0.4);
+  background: rgba(51, 135, 87, 0.08);
+  box-shadow: 0 16px 44px rgba(51, 135, 87, 0.22);
+}
+
+.guideTitle {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0;
+}
+.guideBlurb {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+  flex: 1;
+}
+.guideRead {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--mint);
+  margin-top: 4px;
+}
+
 /* ════════════════════════════ FAQ ════════════════════════════ */
 .faq {
   max-width: 760px;
@@ -711,9 +773,17 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
+
+  .guidesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
 }
 
 @media (max-width: 600px) {
+  .guides { padding: 32px 18px; }
+  .guidesGrid { grid-template-columns: 1fr; }
+
   .page { padding: 10px; }
 
   .nav { padding: 16px 18px; }

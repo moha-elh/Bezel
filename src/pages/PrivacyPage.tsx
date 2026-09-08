@@ -3,7 +3,11 @@ import { ContentPage } from './ContentPage';
 
 export function PrivacyPage() {
   return (
-    <ContentPage title="Privacy Policy">
+    <ContentPage
+      title="Privacy Policy"
+      description="How Bezel handles your data: photos never leave your device, no accounts, limited privacy-friendly analytics, and how advertising cookies are used."
+      path="/privacy"
+    >
       <p className="meta">Last updated: 11 August 2026</p>
 
       <p className="lead">

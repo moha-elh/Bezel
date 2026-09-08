@@ -1,0 +1,82 @@
+import { Link } from 'react-router-dom';
+import { ContentPage } from './ContentPage';
+import { RelatedGuides } from '../components/RelatedGuides';
+
+export function OpenToWorkPage() {
+  return (
+    <ContentPage
+      title="How to make an #OpenToWork frame recruiters actually notice"
+      description="A practical guide to building an #OpenToWork profile ring that stands out — what color to use, what to write, and the mistakes that make recruiters scroll past."
+      path="/open-to-work"
+    >
+      <p className="lead">
+        LinkedIn&rsquo;s built-in green &ldquo;Open to work&rdquo; banner works, but everyone uses
+        the exact same one. A custom ring lets you say the same thing in a way that actually catches
+        a recruiter&rsquo;s eye, and lets you add the one detail the default banner leaves out: what
+        you&rsquo;re open <em>to</em>.
+      </p>
+
+      <h2>Why the green ring still works</h2>
+      <p>
+        Recruiters skim. In a list of search results or a feed of applicants, every profile photo is
+        a small circle of a face against a plain background. Green is the color the platform has
+        trained people to read as &ldquo;available,&rdquo; so a green ring gets understood instantly,
+        even at thumbnail size and even before anyone reads a word. The point of making your own
+        instead of using the default isn&rsquo;t to reinvent the signal, it&rsquo;s to keep the
+        signal and add specifics.
+      </p>
+
+      <h2>What to actually write on it</h2>
+      <p>
+        A ring holds a few words, not a sentence, so pick the single most useful thing a recruiter
+        needs to know. In order of usefulness:
+      </p>
+      <ul>
+        <li>
+          <strong>The role.</strong> &ldquo;Open to: Product Design&rdquo; or &ldquo;Hiring me:
+          Backend&rdquo; tells a recruiter in one glance whether you&rsquo;re relevant. This beats a
+          generic &ldquo;#OpenToWork&rdquo; every time.
+        </li>
+        <li>
+          <strong>Availability.</strong> &ldquo;Available now&rdquo; or &ldquo;Starting Jan&rdquo;
+          answers the very next question a recruiter has.
+        </li>
+        <li>
+          <strong>The plain tag.</strong> If your headline already says the role, a simple
+          &ldquo;#OpenToWork&rdquo; keeps the photo clean and lets the text below do the work.
+        </li>
+      </ul>
+      <p>
+        Avoid cramming two ideas onto one ring. If it doesn&rsquo;t read in half a second at small
+        size, it&rsquo;s too much.
+      </p>
+
+      <h2>Color and contrast</h2>
+      <p>
+        Green reads as &ldquo;available,&rdquo; but the exact green matters. A slightly deeper,
+        less neon green looks more professional and still reads correctly. Whatever you choose, keep
+        the text high-contrast against both the ring and your photo, because most people will see it
+        at the size of a fingernail. Test it small before you commit.
+      </p>
+
+      <h2>Mistakes that make recruiters scroll past</h2>
+      <ul>
+        <li><strong>Text too long.</strong> If the words wrap tightly around the whole ring, nobody reads them.</li>
+        <li><strong>Low contrast.</strong> Pale text on a bright ring disappears at thumbnail size.</li>
+        <li><strong>Covering your face.</strong> The ring should frame your head, not crop into it. Keep your face centered and the ring on the outer edge.</li>
+        <li><strong>Leaving it up forever.</strong> The moment you&rsquo;re hired, swap it out. A stale &ldquo;open to work&rdquo; ring on someone who clearly has a job reads as neglect.</li>
+      </ul>
+
+      <h2>Make yours</h2>
+      <p>
+        In <Link to="/app">the Bezel editor</Link> you can pick your green, type the role, and export
+        a high-resolution square PNG in about a minute, all in your browser, with nothing uploaded
+        anywhere. If you&rsquo;re new to it, the <Link to="/guide">step-by-step guide</Link> covers
+        the whole flow, and the <Link to="/ring-colors">ring color guide</Link> explains what other
+        colors signal.
+      </p>
+
+      <RelatedGuides current="/open-to-work" />
+    </ContentPage>
+  );
+}

@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useHead } from '../hooks/useHead';
+import { ARTICLES } from '../data/articles';
 import bezelLogo from '../assets/Bezel full browser.png';
 import f1 from '../assets/frames/frame-1.png';
 import f2 from '../assets/frames/frame-2.png';
@@ -125,6 +127,13 @@ export function LandingPage() {
   const navigate = useNavigate();
   const goToApp = () => navigate('/app');
 
+  useHead({
+    title: 'Bezel | Free LinkedIn Profile Frame Generator',
+    description:
+      'Create custom LinkedIn profile frames instantly in your browser. Choose ring colors, add text, pick templates. No login, no server upload — 100% free.',
+    path: '/',
+  });
+
   return (
     <div className={styles.page}>
 
@@ -159,6 +168,7 @@ export function LandingPage() {
           <div className={styles.navPill}>
             <button onClick={scrollToTop} className={`${styles.navLink} ${styles.navLinkActive}`}>Home</button>
             <button onClick={scrollToId('frames')} className={styles.navLink}>Frames</button>
+            <button onClick={scrollToId('guides')} className={styles.navLink}>Guides</button>
             <button onClick={scrollToId('faq')} className={styles.navLink}>FAQ</button>
             <span className={styles.navChip}>
               100% free <span className={styles.navChipDot}>✦</span>
@@ -269,6 +279,27 @@ export function LandingPage() {
               </span>
               <span className={styles.frameCardCaption}>{frame.caption}</span>
             </button>
+          ))}
+        </Reveal>
+      </section>
+
+      {/* ── Guides ── */}
+      <section id="guides" className={styles.guides}>
+        <Reveal className={styles.guidesHead}>
+          <p className={styles.eyebrow}>Guides</p>
+          <h2 className={styles.h2}>Get more out of your frame</h2>
+          <p className={styles.sectionSub}>
+            Short, practical reads on making a frame that actually lands, from color choices to
+            what to write on it.
+          </p>
+        </Reveal>
+        <Reveal className={styles.guidesGrid}>
+          {ARTICLES.map((a) => (
+            <Link key={a.path} to={a.path} className={styles.guideCard}>
+              <h3 className={styles.guideTitle}>{a.title}</h3>
+              <p className={styles.guideBlurb}>{a.blurb}</p>
+              <span className={styles.guideRead}>Read →</span>
+            </Link>
           ))}
         </Reveal>
       </section>

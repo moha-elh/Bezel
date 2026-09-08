@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
 import { ContentPage } from './ContentPage';
+import { RelatedGuides } from '../components/RelatedGuides';
 
 export function GuidePage() {
   return (
-    <ContentPage title="How to add a custom frame to your LinkedIn profile photo">
+    <ContentPage
+      title="How to add a custom frame to your LinkedIn profile photo"
+      description="Step-by-step guide to making a custom ring frame for your LinkedIn photo in Bezel — upload, crop, pick colors and text, and export a high-res PNG. Free, no account."
+      path="/guide"
+    >
       <p className="lead">
         A profile-photo frame is the fastest way to make your LinkedIn stand out in a feed of
         near-identical headshots. This guide walks through making one in Bezel from start to
@@ -81,6 +86,8 @@ export function GuidePage() {
       <p style={{ marginTop: '40px' }}>
         Ready? <Link to="/app">Open the tool</Link> and make your first frame in about a minute.
       </p>
+
+      <RelatedGuides current="/guide" />
     </ContentPage>
   );
 }

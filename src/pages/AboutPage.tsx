@@ -3,7 +3,11 @@ import { ContentPage } from './ContentPage';
 
 export function AboutPage() {
   return (
-    <ContentPage title="About Bezel">
+    <ContentPage
+      title="About Bezel"
+      description="Bezel is a free, private, browser-based tool for adding a custom ring and message to your LinkedIn profile photo — no account, no upload, no catch."
+      path="/about"
+    >
       <p className="lead">
         Bezel is a free tool for wrapping your LinkedIn profile photo in a custom ring with your own
         message. It runs entirely in your browser, with no account, no upload, and no catch.
@@ -36,6 +40,25 @@ export function AboutPage() {
         <li>A high-resolution square PNG, sized for a LinkedIn profile photo</li>
       </ul>
       <p>New here? The <Link to="/guide">step-by-step guide</Link> walks you through your first frame.</p>
+
+      <h2>What makes it different</h2>
+      <p>
+        Most profile-frame tools ask for a sign-up, upload your photo to their servers, watermark
+        the result, or hide the good options behind a payment. Bezel does none of that. There is no
+        account, nothing you add ever leaves your device, there is no watermark, and every feature is
+        free. It is a single tool that does one thing well: put a clean, readable ring and message
+        around a photo and hand you back a high-resolution PNG.
+      </p>
+
+      <h2>Learn how to use it</h2>
+      <p>
+        If you want more than the basics, these guides go deeper: making an{' '}
+        <Link to="/open-to-work">#OpenToWork frame</Link>, choosing{' '}
+        <Link to="/ring-colors">ring colors</Link> for the right message,{' '}
+        <Link to="/linkedin-photo-tips">profile photo best practices</Link>, using frames for{' '}
+        <Link to="/announcement-frames">launches and hiring</Link>, and making a{' '}
+        <Link to="/speaker-frame">&ldquo;Speaking at…&rdquo; frame</Link> for an event.
+      </p>
 
       <h2>Contact</h2>
       <p>

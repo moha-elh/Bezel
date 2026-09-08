@@ -3,7 +3,11 @@ import { ContentPage } from './ContentPage';
 
 export function TermsPage() {
   return (
-    <ContentPage title="Terms of Use">
+    <ContentPage
+      title="Terms of Use"
+      description="The short, plain terms for using Bezel, the free browser-based LinkedIn profile frame generator."
+      path="/terms"
+    >
       <p className="meta">Last updated: 11 August 2026</p>
 
       <p className="lead">

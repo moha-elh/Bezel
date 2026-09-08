@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useFrameStore } from '../store/frameStore';
+import { useHead } from '../hooks/useHead';
 import { PhotoUploader } from '../components/PhotoUploader/PhotoUploader';
 import { CropControls } from '../components/PhotoUploader/CropControls';
 import { TemplateGallery } from '../components/TemplateGallery/TemplateGallery';
@@ -11,6 +12,13 @@ import styles from './EditorPage.module.css';
 
 export function EditorPage() {
   const hasPhoto = useFrameStore((s) => s.photo !== null);
+
+  useHead({
+    title: 'Bezel editor — make your LinkedIn frame',
+    description:
+      'The Bezel editor: upload a photo, add a custom ring and message, and export a high-resolution LinkedIn profile frame. Runs entirely in your browser.',
+    path: '/app',
+  });
 
   return (
     <div className={styles.app}>
