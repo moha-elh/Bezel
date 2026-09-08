@@ -7,6 +7,9 @@ import { PhotoTipsPage } from './pages/PhotoTipsPage';
 import { RingColorsPage } from './pages/RingColorsPage';
 import { AnnouncementFramesPage } from './pages/AnnouncementFramesPage';
 import { SpeakerFramePage } from './pages/SpeakerFramePage';
+import { FrameIdeasPage } from './pages/FrameIdeasPage';
+import { JobSeekerFramesPage } from './pages/JobSeekerFramesPage';
+import { PhotoCropPage } from './pages/PhotoCropPage';
 import { AboutPage } from './pages/AboutPage';
 import { PrivacyPage } from './pages/PrivacyPage';
 import { TermsPage } from './pages/TermsPage';
@@ -24,6 +27,9 @@ export default function App() {
         <Route path="/ring-colors" element={<RingColorsPage />} />
         <Route path="/announcement-frames" element={<AnnouncementFramesPage />} />
         <Route path="/speaker-frame" element={<SpeakerFramePage />} />
+        <Route path="/frame-ideas" element={<FrameIdeasPage />} />
+        <Route path="/job-seeker-frames" element={<JobSeekerFramesPage />} />
+        <Route path="/linkedin-photo-crop" element={<PhotoCropPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />

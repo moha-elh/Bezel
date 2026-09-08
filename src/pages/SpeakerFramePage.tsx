@@ -41,6 +41,17 @@ export function SpeakerFramePage() {
         </li>
       </ul>
 
+      <h2>Panel, workshop, or booth, not just keynotes</h2>
+      <p>
+        A &ldquo;Speaking at&nbsp;…&rdquo; ring isn&rsquo;t only for headline speakers. If
+        you&rsquo;re on a panel, running a workshop, hosting a roundtable, or even just staffing a
+        booth, a ring that says so helps the right people find you at a busy event. &ldquo;Panelist
+        @Event,&rdquo; &ldquo;Workshop, Room 3,&rdquo; or &ldquo;Come to our booth&rdquo; all turn
+        your profile into a small wayfinding sign in the days when attendees are planning who to
+        meet. The more specific the role, the more useful it is to someone scanning for a reason to
+        talk to you.
+      </p>
+
       <h2>Color and readability</h2>
       <p>
         If the event has a known brand color, matching it makes the ring feel official and helps
@@ -56,6 +67,25 @@ export function SpeakerFramePage() {
         at&nbsp;…&rdquo; ring for an event that already happened is the clearest sign of a profile on
         autopilot. Because a frame takes a minute to remake, swapping it in and out costs you almost
         nothing.
+      </p>
+
+      <h2>Pair it with the event&rsquo;s other channels</h2>
+      <p>
+        Your ring works best as part of the run-up, not on its own. If the event has an official
+        hashtag, use the same one on your ring that you use in posts, so someone who spots it can
+        follow the thread. If you&rsquo;re on the agenda, a quick post, &ldquo;I&rsquo;ll be
+        speaking about X, come say hi,&rdquo; plus the matching ring turns your whole profile into a
+        consistent, low-effort promotion that organizers and fellow speakers will notice and often
+        amplify.
+      </p>
+
+      <h2>After the event</h2>
+      <p>
+        Don&rsquo;t just delete the ring, use the moment. Swap it for a short-lived
+        &ldquo;Thanks #EventName&rdquo; or a plain professional ring for a few days, and consider a
+        wrap-up post with a photo or a key takeaway from your talk. That keeps the momentum from the
+        event working for you while the audience still remembers it, then return your photo to its
+        normal state once the buzz fades.
       </p>
 
       <h2>Make yours</h2>

@@ -1,23 +1,50 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ContentPage } from './ContentPage';
-import { RelatedGuides } from '../components/RelatedGuides';
+import bezelLogo from '../assets/Bezel full browser.png';
+import { ARTICLES } from '../data/articles';
+import styles from './NotFoundPage.module.css';
 
+// Standalone 404. Deliberately does NOT set a canonical (a soft-404 should not
+// claim to be a real page) — it only sets the title.
 export function NotFoundPage() {
-  return (
-    <ContentPage
-      title="Page not found"
-      description="That page doesn't exist. Head back to Bezel to make a custom LinkedIn profile frame, or browse the guides."
-      path="/404"
-    >
-      <p className="lead">
-        We couldn&rsquo;t find that page. It may have moved, or the link might be wrong.
-      </p>
-      <p>
-        Try the <Link to="/">home page</Link>, open <Link to="/app">the editor</Link> to make a
-        frame, or read the <Link to="/guide">step-by-step guide</Link>.
-      </p>
+  useEffect(() => {
+    document.title = 'Page not found · Bezel';
+  }, []);
 
-      <RelatedGuides current="/404" />
-    </ContentPage>
+  return (
+    <div className={styles.page}>
+      <nav className={styles.nav}>
+        <Link to="/">
+          <img src={bezelLogo} alt="Bezel" className={styles.markImg} />
+          <span className={styles.markName}>Bezel</span>
+        </Link>
+      </nav>
+
+      <main className={styles.main}>
+        <p className={styles.code}>404</p>
+        <h1 className={styles.title}>This page went missing</h1>
+        <p className={styles.sub}>
+          The link may be broken or the page may have moved. Let&rsquo;s get you back to making
+          frames.
+        </p>
+
+        <div className={styles.btns}>
+          <Link to="/app" className={styles.btnSolid}>Open the tool ↗</Link>
+          <Link to="/" className={styles.btnGhost}>Back to home</Link>
+        </div>
+
+        <div className={styles.guidesWrap}>
+          <p className={styles.guidesLabel}>Or jump into a guide</p>
+          <div className={styles.guidesGrid}>
+            {ARTICLES.slice(0, 6).map((a) => (
+              <Link key={a.path} to={a.path} className={styles.guideCard}>
+                <span className={styles.guideTitle}>{a.title}</span>
+                <span className={styles.guideBlurb}>{a.blurb}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }

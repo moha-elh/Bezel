@@ -44,6 +44,18 @@ const ROUTES = {
     "Speaking at an event? Make a 'Speaking at…' frame · Bezel",
     "Turn your LinkedIn profile photo into a mini event promo with a 'Speaking at…' ring. What to put on it, when to add and remove it, and how to make it read clearly.",
   ],
+  '/frame-ideas': [
+    'LinkedIn frame message ideas that actually work · Bezel',
+    'A big, sorted list of short LinkedIn profile-ring messages — for job seekers, founders, recruiters, speakers, and personal brand — plus the rules that make a ring message land.',
+  ],
+  '/job-seeker-frames': [
+    'Profile frames for job seekers and new grads · Bezel',
+    'How job seekers and new graduates can use a LinkedIn profile ring to get noticed by recruiters — what to write, what to avoid, and how to look confident rather than desperate.',
+  ],
+  '/linkedin-photo-crop': [
+    'How LinkedIn crops your profile photo · Bezel',
+    "LinkedIn shows your profile photo as a circle and resizes it everywhere. Here's exactly how the crop works and how to frame your photo so nothing important gets cut off.",
+  ],
   '/about': [
     'About Bezel · Bezel',
     'Bezel is a free, private, browser-based tool for adding a custom ring and message to your LinkedIn profile photo — no account, no upload, no catch.',

@@ -64,6 +64,34 @@ export function RingColorsPage() {
         <Link to="/linkedin-photo-tips">photo tips</Link> for how thumbnail size changes everything.
       </p>
 
+      <h2>Pairing color with your text</h2>
+      <p>
+        Color and message should agree. A calm blue ring with the word &ldquo;URGENT&rdquo; sends a
+        mixed signal; a red ring with &ldquo;Available for coffee chats&rdquo; overstates it. Decide
+        the message first, then pick the color that reinforces it. If your message is neutral,
+        &ldquo;Certified in&nbsp;…,&rdquo; a role name, a personal tag, blue or a deep green keeps it
+        professional. Save red and bright orange for the moments that genuinely warrant urgency, so
+        they still mean something when you use them.
+      </p>
+
+      <h2>Consider your industry</h2>
+      <p>
+        The same color reads differently across fields. A bold orange that feels perfect for a
+        creator or marketer can feel loud in law or finance, where a thin black, deep blue, or
+        understated green fits the room better. You&rsquo;re not obligated to match your
+        industry&rsquo;s norms, sometimes standing out is the point, but know which way you&rsquo;re
+        leaning and do it deliberately rather than by accident.
+      </p>
+
+      <h2>A quick reference</h2>
+      <ul>
+        <li><strong>Green</strong> — available, growth, open to work</li>
+        <li><strong>Blue</strong> — trustworthy, calm, safe in any field</li>
+        <li><strong>Red</strong> — urgent, now, use sparingly</li>
+        <li><strong>Orange</strong> — energetic, friendly, creative</li>
+        <li><strong>Black / white</strong> — understated, confident, premium</li>
+      </ul>
+
       <p style={{ marginTop: '32px' }}>
         Ready to try a few? <Link to="/app">Open the editor</Link>, the ring color is a single
         control, so it&rsquo;s quick to compare options.

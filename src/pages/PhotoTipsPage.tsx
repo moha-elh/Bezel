@@ -71,6 +71,35 @@ export function PhotoTipsPage() {
         <li>A frame only when it adds a real message</li>
       </ul>
 
+      <h2>Do you need a professional photographer?</h2>
+      <p>
+        No. A professional shoot helps, but the biggest wins, filling the frame, good light, a clean
+        background, a warm expression, are all free and within reach of a phone camera. Prop your
+        phone at eye level, face a window, use the timer or ask someone to shoot a few frames, and
+        pick the one where you look relaxed. A thoughtful phone photo beats an expensive one where
+        you&rsquo;re stiff or standing too far back. Spend your effort on the fundamentals before you
+        spend money.
+      </p>
+
+      <h2>How often should you update it?</h2>
+      <p>
+        Refresh your photo when you no longer look like it, roughly every couple of years, or sooner
+        if your appearance has changed noticeably. Showing up to an interview looking clearly older
+        or different than your profile creates a small, avoidable friction. Your headshot is a
+        promise; keep it honest. A frame, by contrast, is a status you can and should change often,
+        so you can leave a good base photo in place and just swap the ring as your situation
+        changes.
+      </p>
+
+      <h2>Common mistakes to avoid</h2>
+      <ul>
+        <li>Standing too far back so your face is tiny at thumbnail size</li>
+        <li>Harsh overhead or backlight that shadows or silhouettes you</li>
+        <li>A busy background that competes with your face</li>
+        <li>A serious, tense expression when your field rewards approachability</li>
+        <li>A heavy filter that makes you look unlike your real self</li>
+      </ul>
+
       <p style={{ marginTop: '32px' }}>
         Got a good headshot? <Link to="/app">Add a ring in the editor</Link>, or read the{' '}
         <Link to="/guide">full frame guide</Link> first.

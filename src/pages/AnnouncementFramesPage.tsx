@@ -67,6 +67,25 @@ export function AnnouncementFramesPage() {
         forget.
       </p>
 
+      <h2>Pair the ring with one post, then let it run</h2>
+      <p>
+        The strongest play is to combine the two formats. Publish a single post announcing the news,
+        launch, raise, or open role, so it reaches your feed once, then put up the matching ring so
+        the message keeps working long after the post is buried. The post is the spike; the ring is
+        the steady baseline. Together they cover both the people who happen to see your feed that day
+        and the far larger number who encounter your profile over the following weeks.
+      </p>
+
+      <h2>How long to keep an announcement ring up</h2>
+      <p>
+        Match the ring to the life of the news. A launch ring earns its brightest color for the
+        first week or two, then you can soften it to a steadier &ldquo;now live&rdquo; or retire it.
+        A &ldquo;we&rsquo;re hiring&rdquo; ring should come down the moment the role is filled,
+        leaving it up on a closed position wastes candidates&rsquo; attention and dents your
+        credibility. Set yourself a reminder to review it, the same way you&rsquo;d close out an
+        expired job posting.
+      </p>
+
       <h2>Make one in a minute</h2>
       <p>
         Because it&rsquo;s cheap to remake, you can update the ring as your news changes. Head to{' '}

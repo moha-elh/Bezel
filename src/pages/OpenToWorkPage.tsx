@@ -67,6 +67,28 @@ export function OpenToWorkPage() {
         <li><strong>Leaving it up forever.</strong> The moment you&rsquo;re hired, swap it out. A stale &ldquo;open to work&rdquo; ring on someone who clearly has a job reads as neglect.</li>
       </ul>
 
+      <h2>Does an #OpenToWork ring hurt you with recruiters?</h2>
+      <p>
+        You&rsquo;ll see people argue that any &ldquo;open to work&rdquo; signal looks desperate.
+        The evidence doesn&rsquo;t really support that: recruiters actively filter for available
+        candidates, and a clear signal makes their job easier, which makes you easier to find. What
+        <em>can</em> read badly is a vague, permanent, or panicked signal. A specific ring
+        (&ldquo;Open to: Product&rdquo;), in a calm professional color, kept current, does the
+        opposite, it looks like someone who knows what they want. If you&rsquo;re in a senior or
+        confidential search, you can keep the ring subtle, name the discipline rather than shouting
+        &ldquo;hire me,&rdquo; and rely on your headline to carry the detail.
+      </p>
+
+      <h2>How long to keep it up</h2>
+      <p>
+        Treat the ring as a live status, not a decoration. Put it up when you start looking, refresh
+        the wording if your target role shifts, and take it down the day you accept an offer. The
+        fastest way to undercut a strong profile is to leave a stale &ldquo;open to work&rdquo; ring
+        on a photo after you&rsquo;ve clearly started somewhere new, it&rsquo;s the first thing a
+        future recruiter or manager notices, and it reads as inattention. Because a frame takes a
+        minute to remake, keeping it accurate costs you nothing.
+      </p>
+
       <h2>Make yours</h2>
       <p>
         In <Link to="/app">the Bezel editor</Link> you can pick your green, type the role, and export

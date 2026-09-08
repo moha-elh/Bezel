@@ -37,4 +37,19 @@ export const ARTICLES: Article[] = [
     title: "Make a 'Speaking at…' frame for an event",
     blurb: 'Turn your profile photo into a mini event promo in the run-up to a talk.',
   },
+  {
+    path: '/frame-ideas',
+    title: 'LinkedIn frame message ideas that actually work',
+    blurb: 'A big list of short, punchy ring messages sorted by goal — steal one or adapt it.',
+  },
+  {
+    path: '/job-seeker-frames',
+    title: 'Profile frames for job seekers and new grads',
+    blurb: 'How to use a ring to get noticed in a crowded market, without looking desperate.',
+  },
+  {
+    path: '/linkedin-photo-crop',
+    title: 'How LinkedIn crops your profile photo',
+    blurb: 'The circle crop explained — and how to frame your photo so nothing important is cut.',
+  },
 ];

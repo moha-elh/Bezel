@@ -10,7 +10,7 @@
     <loc>https://trybezel.xyz/app</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://trybezel.xyz/guide</loc>
@@ -44,6 +44,24 @@
   </url>
   <url>
     <loc>https://trybezel.xyz/speaker-frame</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trybezel.xyz/frame-ideas</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trybezel.xyz/job-seeker-frames</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trybezel.xyz/linkedin-photo-crop</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
